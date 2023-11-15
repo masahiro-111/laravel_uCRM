@@ -7,9 +7,9 @@
 </script>
 
 <template>
-    <div v-if="$page.props.flash.message" class="bg-blue-300">
+    <!-- <div v-if="$page.props.flash.status === 'success'" class="bg-blue-300 text-white p-4">
         {{ $page.props.flash.message }}
-    </div>
+    </div> -->
     <ul>
         <li v-for="blog in blogs" :key="blog.id">
             <Link :href="route('inertia.show', { id : blog.id })">件名： {{ blog.title }}</Link>,
