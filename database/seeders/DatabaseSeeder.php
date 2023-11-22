@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             ItemSeeder::class
         ]);
 
-        Customer::factory(1000)->create();
+        Customer::factory(30000)->create();
         $items = Item::all();
         Purchase::factory(100)->create()->each( function(Purchase $purchase) use ($items)  {
             $purchase->items()->attach(
